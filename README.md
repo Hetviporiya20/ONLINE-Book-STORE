@@ -34,6 +34,24 @@ Software And Tools Required
 -Eclipse [Enterprise Edition]
 -Java [JDK 8+]
 
-Dummy Database Initialization
+##Dummy Database Initialization
+_______________________________________________________
 
+create database onlinebookstore;
 
+use onlinebookstore;
+
+create table books(barcode varchar(100) primary key, name varchar(100), author varchar(100), price int, quantity int);
+
+create table users(username varchar(100) primary key,password varchar(100), firstname varchar(100),
+    lastname varchar(100),address text, phone varchar(100),mailid varchar(100),usertype int);
+
+insert into books values('10101','C','James',500,5);
+insert into books values('10102','Java','Scott ',150,13);
+insert into books values('10103','Database','Charles',124,360);
+insert into users values('User','Password','First','User','My Home','42502216225','User@gmail.com',2);
+insert into users values('Admin','Admin','Mr.','Admin','Haldia WB','9584552224521','admin@gmail.com',1);
+insert into users values('mgmg','mgmg','Mgmg','u','high','1236547089','mgmg@gmail.com',2);
+
+commit;
+____________________________________________________________
